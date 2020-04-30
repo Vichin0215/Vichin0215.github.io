@@ -6,7 +6,7 @@
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="https://vichin0215.github.io/year/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 
 <meta name="description" content="pipeline有个数据源，把这个数据源送到一个节点，这个节点处理完再送到下一个节点，这样一级一级送下去，最后又一个Sink，Sink节点只进不出。 节点和节点之间怎么通信呢？ 传统语言是通过方法调用实现的。 Go语言是通过channel通信的 归并排序数据分为左右两半，分别归并排序，再把两个有序数据合并 外部排序pipeline首先有个原始数据，然后分块得读取这个原始数据，保证内存能够放得下，每">
 <meta property="og:type" content="website">
@@ -15,25 +15,22 @@
 <meta property="og:site_name" content="Vichin&#39;s Blog">
 <meta property="og:description" content="pipeline有个数据源，把这个数据源送到一个节点，这个节点处理完再送到下一个节点，这样一级一级送下去，最后又一个Sink，Sink节点只进不出。 节点和节点之间怎么通信呢？ 传统语言是通过方法调用实现的。 Go语言是通过channel通信的 归并排序数据分为左右两半，分别归并排序，再把两个有序数据合并 外部排序pipeline首先有个原始数据，然后分块得读取这个原始数据，保证内存能够放得下，每">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://vichin0215.github.io/year/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/avatar.jpg">
+<meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=160">
 <meta property="article:published_time" content="2020-04-02T03:27:33.000Z">
 <meta property="article:modified_time" content="2020-04-09T01:05:29.185Z">
 <meta property="article:author" content="Vichin">
 <meta property="article:tag" content="Go">
 <meta property="article:tag" content="pipeline">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://vichin0215.github.io/year/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/avatar.jpg">
-
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Vichin","description":"Learn to think independently.","image":"https://vichin0215.github.io/avatar.jpg"},"url":"https://vichin0215.github.io","image":"https://vichin0215.github.io/avatar.jpg","description":"","author":{"@type":"Person","name":"Vichin","description":"Learn to think independently.","image":"https://vichin0215.github.io/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"go项目","url":"https://vichin0215.github.io/year/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/","headline":"go语言搭建pipeline","image":"https://vichin0215.github.io/avatar.jpg","datePublished":"2020-04-02T03:27:33.000Z","dateModified":"2020-04-09T01:05:29.185Z","keywords":"Go,pipeline","description":"","publisher":{"@type":"Organization","name":"Vichin's Blog","logo":{"@type":"ImageObject","url":"https://vichin0215.github.io/avatar.jpg"}},"author":{"@type":"Person","name":"Vichin","description":"Learn to think independently.","image":"https://vichin0215.github.io/avatar.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://vichin0215.github.io/year/04/02/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"}}]</script>
+<meta name="twitter:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=160">
 
 
-<link href="//cdn.jsdelivr.net/gh/fiteen/fiteen.github.io@v0.1.0/font.css" rel="stylesheet">
 <link href="/styles.e4c22be5bb2c26eab146.css" rel="stylesheet">
 
-<link rel="stylesheet" href="/theme.22b5996980012dc73b5b.css" is="theme">
+<link rel="stylesheet" href="/theme.12c75f63c07d462dcdc4.css" is="theme">
 
 
-<script src="/config.8549ca12ad22859be226.js"></script>
+<script src="/config.e8480db2fae5141e2f25.js"></script>
 
 
 <meta name="generator" content="Hexo 4.2.0"></head>
